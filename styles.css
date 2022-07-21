@@ -1,0 +1,199 @@
+ * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 2rem;
+    background-color: black;
+}
+
+main {
+    background-color: #1F2937;
+    color: white;
+    height: auto;
+    padding-block-end: .01rem;
+}
+
+/* Header content */
+.header-container {
+    background-image: linear-gradient(
+    60deg,
+    hsl(197, 93%, 67%) 34%,
+    rgb(49, 172, 234) 43%,
+    rgb(244, 113, 209) 67%,
+    rgb(241, 67, 160) 86%,
+    rgb(249, 22, 147) 100%
+    );
+    background-size: 250%;
+    color: white;
+    text-align: center;
+    padding: 3rem;
+    animation: bg-animation 12s infinite alternate;
+}
+
+@keyframes bg-animation {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
+
+h1 {
+    margin-block-start: 0;
+}
+
+.header p {
+    font-weight: 150;
+}
+
+/* Buttons */
+.buttons-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    width: 100%;
+    margin-block: 2rem;
+}
+
+.btn {
+    padding-block: 1.2rem;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    transition: all .3s;
+    font-size:large;
+    cursor: pointer;
+}
+
+.btn p {
+    opacity: .9;
+    transition: all .3s;
+}
+
+.btn:hover {
+    transform: scale(1.06);
+    box-shadow: 2px 2px 10px #1c1c1c;
+}
+
+.btn:hover p, .btn:focus p {
+    opacity: 1;
+    transform: scale(1.06);
+}
+
+#btn-1 {
+    background-image: linear-gradient(
+      70deg,
+      hsl(197, 93%, 67%) 34%,
+      rgb(73, 187, 244) 50%,
+      rgb(59, 159, 241) 100%
+    );
+  }
+
+  #btn-2 {
+    background-image: linear-gradient(
+      55deg,
+      rgb(59, 159, 241) 10%,
+      rgb(253, 159, 228) 50%,
+      rgb(244, 113, 209) 75%,
+      rgb(255, 93, 204) 100%
+    );
+  }
+
+  #btn-3 {
+    background-image: linear-gradient(
+      55deg,
+      hsl(316deg 50% 55%) 0%,
+      rgb(241, 67, 160) 50%,
+      rgb(249, 22, 147) 100%
+    );
+  }
+
+  /* Tasks and Total */
+  .container {
+    margin: 2rem;
+  }
+
+  .items-el {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .completed-items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #item {
+    font-size: small;
+    opacity: .8;
+    margin-block-end: 1.5rem;
+  }
+
+  #total-amount {
+    text-align: end;
+    font-size: 35px;
+    margin-block-start: 0;
+  }
+
+  #invoice-btn {
+    width: 100%;
+    margin-block: 2rem;
+    background-image: linear-gradient(
+        60deg,
+        hsl(197, 93%, 67%) 34%,
+        rgb(49, 172, 234) 43%,
+        rgb(244, 113, 209) 67%,
+        rgb(241, 67, 160) 86%,
+        rgb(249, 22, 147) 100%
+    );
+    background-size: 250%;
+    color: white;
+    text-align: center;
+    animation: bg-animation 12s infinite alternate;
+    border: none;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .4s;
+  }
+
+  #invoice-btn p {
+    margin-inline-start: 6px;
+    transition: all .4s;
+  }
+
+  #invoice-btn:hover {
+    transform: scale(105%);
+    box-shadow: 2px 2px 10px #1c1c1c;
+  }
+
+  #invoice-btn:hover img {
+    transform: scale(105%);
+  }
+
+  #invoice-btn:hover p {
+    transform: scale(105%);
+    text-shadow: 1px 1px 20px #1c1c1c;
+    margin-inline-start: 7px;
+  }
+
+  .remove {
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 11px;
+    font-weight: 200;
+    padding-inline-start: .75rem;
+    position: relative;
+    bottom: 1px;
+    cursor: pointer;
+  }
+
+  .money-sign {
+    font-weight: 200;
+    margin-inline-end: 2px;
+  }
